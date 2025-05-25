@@ -7,7 +7,7 @@ A VPC is a virtual network that you create in the cloud. It allows you to have y
 Think of it as having your own little "internet" within the bigger internet. This virtual network is completely isolated from other users' networks, so your data and applications are secure and protected.
 
 ############
-practice
+practice is done
 ############
 
 Just like a physical network, a VPC has its own set of rules and configurations. You can define the IP address range for your VPC and create smaller subnetworks within it called subnets. These subnets help you organize your resources and control how they communicate with each other.
