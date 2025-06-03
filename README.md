@@ -81,7 +81,7 @@ This day introduces Infrastructure as Code (IaC) using AWS CloudFormation. You'l
 
 **Project:** You'll work on creating a CloudFormation template that provisions a fully configured application stack, including EC2 instances, networking components, and security groups.
 
-## Day 12: AWS CodeCommit
+## Day 12: AWS CodeCommit (Discontinued for new users)
 
 This day focuses on AWS CodeCommit, a managed source control service. You'll learn how to set up a Git repository in CodeCommit, collaborate with team members, and manage version control of your codebase.
 
