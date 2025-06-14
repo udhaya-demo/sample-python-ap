@@ -27,6 +27,6 @@ phases:
       - echo "Build completed successfully!"
 artifacts:
   files:
-    base-directory: day-14/simple-python-app
-
-
+    - '**/*'
+  base-directory: day-14/simple-python-app
+ 
