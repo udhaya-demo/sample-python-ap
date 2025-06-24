@@ -13,7 +13,7 @@ phases:
   pre_build:
     commands:
       - echo Installing dependencies...
-      - pip install -r sample-python-ap/requirements.txt
+      - pip install -r requirements.txt
       - echo Logging in to DockerHub...
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin docker.io
 
