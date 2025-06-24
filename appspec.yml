@@ -1,16 +1,21 @@
 version: 0.0
 os: linux
-
 files:
-  - source: scripts
-    destination: /home/ubuntu/scripts
+  - source: /
+    destination: /home/ubuntu/sample-python-ap
 
 hooks:
   ApplicationStop:
-    - location: /home/ubuntu/scripts/stop_container.sh
-      timeout: 300
-      runas: root
+    - location: stop_container.sh
+      timeout: 60
+      runas: ubuntu
+
+  BeforeInstall:
+    - location: cleanup.sh
+      timeout: 60
+      runas: ubuntu
+
   AfterInstall:
-    - location: /home/ubuntu/scripts/start_container.sh
-      timeout: 300
-      runas: root
+    - location: start_container.sh
+      timeout: 60
+      runas: ubuntu
