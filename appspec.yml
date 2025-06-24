@@ -6,7 +6,7 @@ files:
 
 hooks:
   ApplicationStop:
-    - location: scripts/stop_container.sh
+    - location: /home/ubuntu/sample-python-ap/scripts/stop_container.sh
       timeout: 60
       runas: ubuntu
 
@@ -16,6 +16,6 @@ hooks:
       runas: ubuntu
 
   AfterInstall:
-    - location: scripts/start_container.sh
+    - location: /home/ubuntu/sample-python-ap/scripts/stop_container.sh
       timeout: 60
       runas: ubuntu
