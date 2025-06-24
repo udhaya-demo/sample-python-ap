@@ -1,0 +1,8 @@
+# Ignore everything
+**
+
+# Except needed files
+!Dockerfile
+!requirements.txt
+!app.py
+!scripts/
