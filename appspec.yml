@@ -4,7 +4,7 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/sample-python-ap
-    overwrite: yes
+    overwrite: true
 
 hooks:
   ApplicationStop:
