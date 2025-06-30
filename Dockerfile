@@ -1,23 +1,22 @@
 # Base image
 FROM python:3.8
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy the requirements file
+# Copy requirements and install dependencies
 COPY requirements.txt .
-
-# Install the project dependencies
 RUN pip install -r requirements.txt
 
-# Copy the application code into the container
-COPY . .
+# Copy application code and templates explicitly
+COPY app.py .
+COPY templates/ templates/
+COPY static/ static/   # optional, if using static files
+COPY *.yml .           # if using buildspec.yml and appspec.yml
+COPY scripts/ scripts/ # optional, if using any deployment scripts
 
-# Expose the port the Flask application will be listening on
+# Expose Flask port
 EXPOSE 5000
 
-# Set environment variables, if necessary
-# ENV MY_ENV_VAR=value
-
-# Run the Flask application
+# Run the app
 CMD ["python", "app.py"]
