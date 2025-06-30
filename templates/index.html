@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Udhaya's Social Feed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>📘 Udhaya's Feed</h1>
+
+        <div class="post-form">
+            <textarea placeholder="What's on your mind, Udhaya?" disabled></textarea>
+            <button disabled>Post</button>
+        </div>
+
+        {% for post in posts %}
+        <div class="post">
+            <h3>{{ post.name }}</h3>
+            <p>{{ post.message }}</p>
+            <span class="time">{{ post.time }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
