@@ -11,6 +11,6 @@ def home():
         {'name': 'Student', 'message': 'Learning AWS is so cool! 🚀', 'time': '2025-06-24 17:42:19'},
     ]
     return render_template('index.html', posts=posts)
-    
-    if __name__ == '__main__':
-         app.run(host='0.0.0.0', port=5000)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
