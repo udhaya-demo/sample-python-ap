@@ -1,8 +1,11 @@
 # Ignore everything
 **
 
-# Except needed files
+# Except files/folders we need in the container
 !Dockerfile
 !requirements.txt
 !app.py
+!templates/
+!static/
 !scripts/
+!*.yml
