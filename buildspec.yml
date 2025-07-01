@@ -20,8 +20,8 @@ phases:
   build:
     commands:
       - echo Building Docker image...
-      - docker build -t "$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest" .
-      - docker push "$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest"
+      - docker build -t "$DOCKER_REGISTRY_USERNAME/udhaya-feed-app:latest" .
+      - docker push "$DOCKER_REGISTRY_USERNAME/udhaya-feed-app:latest"
 
   post_build:
     commands:
