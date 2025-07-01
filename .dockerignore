@@ -1,3 +1,4 @@
+# Ignore common unnecessary files and folders
 .git
 __pycache__/
 *.pyc
@@ -8,8 +9,10 @@ __pycache__/
 *.log
 .env
 
-# DO NOT ignore these:
-!static/
-!templates/
-!scripts/
+# Don't ignore required folders and files (important!)
+!static/**
+!templates/**
+!scripts/**
 !*.yml
+!app.py
+!requirements.txt
