@@ -29,4 +29,12 @@ phases:
 
 artifacts:
   files:
-    - '**/*'
+    - app.py
+    - requirements.txt
+    - Dockerfile
+    - buildspec.yml
+    - appspec.yml
+    - templates/**
+    - static/**
+    - scripts/**
+  discard-paths: no
