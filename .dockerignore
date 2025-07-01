@@ -1,21 +1,15 @@
-# Ignore common unnecessary files
+.git
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 *.swp
+*.bak
 *.log
-*.tmp
-*.DS_Store
-.git/
 .env
 
-# Keep only what's needed for the Docker image
-!Dockerfile
-!requirements.txt
-!app.py
-!templates/**
-!static/**
-!scripts/**
-!buildspec.yml
-!appspec.yml
+# DO NOT ignore these:
+!static/
+!templates/
+!scripts/
+!*.yml
