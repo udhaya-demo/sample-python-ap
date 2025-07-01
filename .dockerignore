@@ -1,5 +1,4 @@
-# Ignore unnecessary files and folders
-.git
+# Ignore common unnecessary files
 __pycache__/
 *.pyc
 *.pyo
@@ -7,12 +6,11 @@ __pycache__/
 *.swp
 *.log
 *.tmp
+*.DS_Store
+.git/
+.env
 
-# Explicitly ignore everything else, but allow necessary files
-# Remove the `**` catch-all that breaks valid paths
-# Instead, only ignore specific things
-
-# If needed, explicitly include allowed items
+# Keep only what's needed for the Docker image
 !Dockerfile
 !requirements.txt
 !app.py
