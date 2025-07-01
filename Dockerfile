@@ -1,22 +1,23 @@
-# Base image
+# Use Python base image
 FROM python:3.8
 
 # Set working directory
 WORKDIR /app
 
-# Copy requirements and install dependencies
+# Copy requirement file and install dependencies
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy application code and templates explicitly
 COPY app.py .
 COPY templates/ templates/
-#COPY static/ static/   # optional, if using static files
-#COPY *.yml .           # if using buildspec.yml and appspec.yml
-#COPY scripts/ scripts/ # optional, if using any deployment scripts
+COPY static/ static/        # required for CSS
+COPY *.yml .                # for buildspec.yml and appspec.yml
+COPY scripts/ scripts/      # CodeDeploy hook scripts
 
-# Expose Flask port
+# Expose port for Flask
 EXPOSE 5000
 
-# Run the app
+# Run the application
 CMD ["python", "app.py"]
+
