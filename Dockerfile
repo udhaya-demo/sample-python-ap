@@ -11,9 +11,9 @@ RUN pip install -r requirements.txt
 # Copy application code and templates explicitly
 COPY app.py .
 COPY templates/ templates/
-COPY static/ static/        # required for CSS
-COPY *.yml .                # for buildspec.yml and appspec.yml
-COPY scripts/ scripts/      # CodeDeploy hook scripts
+COPY static/ static/
+COPY *.yml .    
+COPY scripts/ scripts/
 
 # Expose port for Flask
 EXPOSE 5000
