@@ -1,11 +1,12 @@
 # Ignore everything
 **
 
-# Except files/folders we need in the container
+# Allow needed files and directories (including parents)
 !Dockerfile
 !requirements.txt
 !app.py
 !templates/
 !static/
 !scripts/
-!*.yml
+!buildspec.yml
+!appspec.yml
