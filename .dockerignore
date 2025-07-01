@@ -1,12 +1,23 @@
-# Ignore everything
-**
+# Ignore unnecessary files and folders
+.git
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.log
+*.tmp
 
-# Allow needed files and directories (including parents)
+# Explicitly ignore everything else, but allow necessary files
+# Remove the `**` catch-all that breaks valid paths
+# Instead, only ignore specific things
+
+# If needed, explicitly include allowed items
 !Dockerfile
 !requirements.txt
 !app.py
-!templates/
-!static/
-!scripts/
+!templates/**
+!static/**
+!scripts/**
 !buildspec.yml
 !appspec.yml
